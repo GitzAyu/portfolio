@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayush Kumar | Portfolio</title>
+    <meta name="description" content="Portfolio of Ayush Kumar, B.Tech Computer Science Engineer, SIH Semi-Finalist, Tech Innovator.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css?v=17">
+</head>
+<body>
+    <div id="custom-cursor"></div>
+    <canvas id="particles-canvas" class="particles-bg"></canvas>
+
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">Ayush <span>Kumar</span></a>
+            <nav class="nav-links">
+                <a href="#about">About</a>
+                <a href="#achievements">Achievements</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </nav>
+            <button class="menu-toggle" aria-label="Toggle Menu">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- HERO SECTION -->
+        <section id="hero" class="hero">
+            <div class="hero-grid container">
+                <div class="hero-content">
+                    <h2 class="hero-greeting reveal" style="font-size: clamp(1.2rem, 3vw, 1.5rem); letter-spacing: 2px; text-transform: uppercase;">Hi, I'm</h2>
+                    <h1 class="hero-name reveal" style="font-size: clamp(3.5rem, 8vw, 6.5rem); letter-spacing: -3px; line-height: 1.1; font-weight: 800; margin-bottom: 1.5rem; transition-delay: 100ms;">Ayush Kumar</h1>
+                    <h3 class="hero-title reveal" style="font-size: clamp(1.2rem, 3vw, 1.8rem); font-weight: 500; transition-delay: 200ms; max-width: 800px; line-height: 1.4;">
+                        <span class="gradient-text">B.Tech Computer Science Engineer</span> <span class="text-muted" style="margin: 0 10px;">|</span>
+                        <span class="gradient-text-alt">SIH Semi-Finalist</span> <br>
+                        <span class="text-muted" style="font-size: 0.85em; display: inline-block; margin-top: 10px;">Tech Innovator &amp; Abacus Club Coordinator</span>
+                    </h3>
+                    <p class="hero-tagline reveal" style="transition-delay: 300ms; font-size: 1.1rem; max-width: 600px; line-height: 1.6; margin-top: 1rem;">
+                        Passionate about building futuristic, high-performance web solutions in <span style="color:#fff; font-weight: 600;">Web Design</span>, <span style="color:#fff; font-weight: 600;">IoT</span>, and <span style="color:#fff; font-weight: 600;">Robotics</span>.
+                    </p>
+                    <div class="hero-cta reveal" style="transition-delay: 400ms;">
+                        <a href="resume.pdf" download="Ayush_Kumar_Resume.pdf" class="btn btn-primary">&#x2B07;&#xFE0F; Download Resume</a>
+                        <a href="#contact" class="btn btn-secondary">Email Me</a>
+                    </div>
+                    <div class="hero-socials">
+                        <a href="https://github.com/GitzAyu" target="_blank" class="social-icon" aria-label="GitHub">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                        </a>
+                        <a href="https://www.linkedin.com/in/ayuinque" target="_blank" class="social-icon" aria-label="LinkedIn">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                        </a>
+                        <a href="mailto:ayushbar7970@gmail.com" class="social-icon" aria-label="Email">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-image-wrapper reveal" style="transition-delay: 500ms;">
+                    <img src="https://github.com/GitzAyu.png" alt="Ayush Kumar" class="hero-profile-img">
+                    <div class="tech-icon floating-1">&#x1F4BB;</div>
+                    <div class="tech-icon floating-2">&#x1F916;</div>
+                    <div class="tech-icon floating-3">&#x1F4E1;</div>
+                    <div class="tech-icon floating-4">&#x1F680;</div>
+                </div>
+            </div>
+            <div class="scroll-indicator">
+                <div class="mouse"><div class="wheel"></div></div>
+            </div>
+        </section>
+
+        <!-- ABOUT & EDUCATION -->
+        <section id="about" class="about section-padding">
+            <div class="container relative">
+                <div class="glow-orb orb-1"></div>
+                <div class="section-header reveal">
+                    <h2>About <span class="gradient-text">Me</span></h2>
+                    <p class="subtitle">My journey, passion, and education.</p>
+                </div>
+                <div class="about-grid">
+                    <div class="about-image-card glass-card reveal">
+                        <img src="https://github.com/GitzAyu.png" alt="Ayush Kumar" class="about-profile-img">
+                    </div>
+                    <div class="about-content glass-card reveal" style="transition-delay: 100ms;">
+                        <p class="lead-text">I am a highly motivated Computer Science Engineering student with strong interest in developing real-world technology projects.</p>
+                        <p>Currently in my 2nd Year B.Tech at Government Engineering College, West Champaran (Bihar Engineering University), I enjoy working on full-stack web development, IoT systems, and innovative engineering solutions that create meaningful impact.</p>
+                        <h4 class="mt-8 mb-4">Areas of Interest</h4>
+                        <ul class="interest-tags">
+                            <li>Full Stack Web Development</li>
+                            <li>Internet of Things (IoT) Systems</li>
+                            <li>Robotics &amp; Embedded Technology</li>
+                            <li>Aerospace &amp; RC Aircraft Design</li>
+                            <li>Startup and Innovation Ecosystem</li>
+                        </ul>
+                        <p class="mt-6 mb-0 text-muted">My goal is to become a skilled software engineer and tech innovator, contributing to impactful technological advancements and startup ecosystems.</p>
+                    </div>
+                </div>
+                <div class="education-grid mt-8">
+                    <div class="education-content glass-card reveal" style="transition-delay: 200ms;">
+                        <h3><span class="gradient-text-alt">Education</span></h3>
+                        <div class="timeline mt-6">
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-date">2024 &ndash; 2028</div>
+                                <h4 class="timeline-title">B.Tech &ndash; Computer Science Engineering</h4>
+                                <p class="timeline-org">Government Engineering College, West Champaran</p>
+                                <p class="timeline-desc text-muted">Bihar Engineering University</p>
+                            </div>
+                        </div>
+                        <h3 class="mt-10"><span class="gradient-text-alt">Career Objective</span></h3>
+                        <p class="text-muted mt-4 text-sm leading-relaxed">
+                            To leverage my technical skills and innovative mindset in developing impactful software and hardware solutions. I aim to contribute to cutting-edge technology projects, startup ecosystems, and research-driven engineering innovations.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ACHIEVEMENTS -->
+        <section id="achievements" class="achievements section-padding bg-alt">
+            <div class="container relative">
+                <div class="glow-orb orb-2"></div>
+                <div class="section-header reveal">
+                    <h2>Milestones &amp; <span class="gradient-text">Achievements</span></h2>
+                    <p class="subtitle">Recognition for innovation and technical excellence.</p>
+                </div>
+
+                <div class="stats-grid mb-12">
+                    <div class="stat-card glass-card reveal text-center">
+                        <h3 class="stat-number gradient-text" data-target="15">0</h3>
+                        <p class="text-muted" style="margin-top: 15px; font-weight: 600;">Innovative Projects</p>
+                    </div>
+                    <div class="stat-card glass-card reveal text-center" style="transition-delay: 100ms;">
+                        <h3 class="stat-number gradient-text" data-target="10">0</h3>
+                        <p class="text-muted" style="margin-top: 15px; font-weight: 600;">Tech Events Organized</p>
+                    </div>
+                    <div class="stat-card glass-card reveal text-center" style="transition-delay: 200ms;">
+                        <h3 class="stat-number gradient-text" data-target="4">0</h3>
+                        <p class="text-muted" style="margin-top: 15px; font-weight: 600;">Major Awards</p>
+                    </div>
+                </div>
+
+                <div class="achievements-grid">
+                    <div class="achievement-card glass-card premium-hover reveal">
+                        <div class="card-icon glow-blue">&#x1F3C6;</div>
+                        <h3>1st Position &ndash; College Level Science Exhibition</h3>
+                        <div class="badge badge-gold">Winner</div>
+                        <p class="text-muted">Awarded for the innovative project RC Car, showcasing practical application of embedded systems.</p>
+                    </div>
+                    <div class="achievement-card glass-card premium-hover reveal" style="transition-delay: 100ms;">
+                        <div class="card-icon glow-gold">&#x1F947;</div>
+                        <h3>1st Position &ndash; District Level Science Exhibition</h3>
+                        <div class="badge badge-gold">National Youth Festival</div>
+                        <p class="text-muted">Recognized for the project SmartGrow, highlighting innovation in smart agriculture and automation.</p>
+                    </div>
+                    <div class="achievement-card glass-card premium-hover reveal" style="transition-delay: 200ms;">
+                        <div class="card-icon glow-silver">&#x1F948;</div>
+                        <h3>2nd Position &ndash; State Level Science Exhibition</h3>
+                        <div class="badge badge-silver">National Youth Festival</div>
+                        <p class="text-muted">Represented the district at the state level among participants from all 38 districts of Bihar with the project SmartGrow.</p>
+                    </div>
+                    <div class="achievement-card glass-card premium-hover reveal" style="transition-delay: 300ms;">
+                        <div class="card-icon glow-cyan">&#x1F680;</div>
+                        <h3>Finalist &ndash; Bihar Startup Initiative</h3>
+                        <div class="badge badge-accent">Finalist</div>
+                        <p class="text-muted">Startup idea "TailorConnect" was selected for the final stage of Bihar Startup program, recognizing its innovation in digital tailoring.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SKILLS -->
+        <section id="skills" class="skills section-padding">
+            <div class="container relative">
+                <div class="section-header reveal">
+                    <h2>Technical <span class="gradient-text-alt">Skills</span></h2>
+                    <p class="subtitle">Technologies and tools I work with.</p>
+                </div>
+                <div class="bento-grid">
+                    <div class="bento-card glass-card reveal">
+                        <h3 style="margin-bottom: 2rem;">&#x1F4BB; Core Technologies</h3>
+                        <div class="skill-item">
+                            <div class="skill-info"><span>JavaScript / React</span><span>90%</span></div>
+                            <div class="progress-bar"><div class="progress" data-width="90%"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info"><span>HTML &amp; CSS UI/UX</span><span>95%</span></div>
+                            <div class="progress-bar"><div class="progress" data-width="95%"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info"><span>Python / Java</span><span>80%</span></div>
+                            <div class="progress-bar"><div class="progress" data-width="80%"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info"><span>Firebase / Embedded C</span><span>75%</span></div>
+                            <div class="progress-bar"><div class="progress" data-width="75%"></div></div>
+                        </div>
+                    </div>
+                    <div class="bento-card glass-card reveal" style="transition-delay: 100ms;">
+                        <h3 style="margin-bottom: 2rem;">&#x1F9CA; Immersive Web</h3>
+                        <div class="skill-item">
+                            <div class="skill-info"><span>Three.js / WebGL</span><span>85%</span></div>
+                            <div class="progress-bar"><div class="progress" style="background: var(--gradient-secondary)" data-width="85%"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info"><span>Spline / 3D Gen</span><span>90%</span></div>
+                            <div class="progress-bar"><div class="progress" style="background: var(--gradient-secondary)" data-width="90%"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info"><span>Motion UI / Interactions</span><span>95%</span></div>
+                            <div class="progress-bar"><div class="progress" style="background: var(--gradient-secondary)" data-width="95%"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info"><span>Glassmorphism / Dark UI</span><span>90%</span></div>
+                            <div class="progress-bar"><div class="progress" style="background: var(--gradient-secondary)" data-width="90%"></div></div>
+                        </div>
+                    </div>
+                    <div class="bento-card glass-card reveal span-2" style="transition-delay: 200ms;">
+                        <h3 style="text-align: center; margin-bottom: 2rem;">&#x1F6E0;&#xFE0F; Ecosystem &amp; Soft Skills</h3>
+                        <ul class="interest-tags" style="justify-content: center;">
+                            <li>Git &amp; GitHub</li><li>Cursor AI</li><li>Lovable</li><li>Vercel</li>
+                            <li>Figma</li><li>Responsive Design</li><li>REST APIs</li>
+                            <li>SEO Optimization</li><li>Communication</li><li>Team Leadership</li>
+                            <li>Critical Thinking</li><li>Adaptability</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROJECTS -->
+        <section id="projects" class="projects section-padding bg-alt">
+            <div class="container relative">
+                <div class="glow-orb orb-1" style="top: 20%; right: 10%;"></div>
+                <div class="section-header reveal">
+                    <h2>Featured <span class="gradient-text">Projects</span></h2>
+                    <p class="subtitle">Some of my recent work and concepts.</p>
+                </div>
+                <div class="projects-grid">
+                    <div class="project-card glass-card premium-hover reveal">
+                        <div class="project-img">
+                            <div class="img-placeholder" style="background: linear-gradient(45deg, #059669, #047857);">&#x1F331;</div>
+                        </div>
+                        <div class="project-content">
+                            <h3>Smart Greenhouse Project (SmartGrow)</h3>
+                            <p class="text-muted">An intelligent, automated greenhouse system designed for monitoring and managing optimal plant growth conditions.</p>
+                            <div class="tech-stack"><span>IoT</span><span>Sensors</span><span>Automation</span></div>
+                            <div class="project-links mt-6"><a href="#" class="btn btn-secondary">View Details</a></div>
+                        </div>
+                    </div>
+                    <div class="project-card glass-card premium-hover reveal" style="transition-delay: 100ms;">
+                        <div class="project-img">
+                            <div class="img-placeholder" style="background: linear-gradient(45deg, #1f2937, #374151);">&#x2708;&#xFE0F;</div>
+                        </div>
+                        <div class="project-content">
+                            <h3>RC Plane Design &amp; Development</h3>
+                            <p class="text-muted">Designed and developed a functional radio-controlled aircraft model applying aerodynamics and lightweight structural design.</p>
+                            <div class="tech-stack"><span>Aerodynamics</span><span>Electronics</span><span>RC Systems</span></div>
+                            <div class="project-links mt-6"><a href="#" class="btn btn-secondary">View Details</a></div>
+                        </div>
+                    </div>
+                    <div class="project-card glass-card premium-hover reveal" style="transition-delay: 200ms;">
+                        <div class="project-img">
+                            <div class="img-placeholder" style="background: linear-gradient(45deg, #064e3b, #047857);">&#x1F310;</div>
+                        </div>
+                        <div class="project-content">
+                            <h3>Online Tailor Booking (Full Stack)</h3>
+                            <div class="badge badge-accent mb-4" style="margin-top: -10px;">Ongoing</div>
+                            <p class="text-muted">Developing a modern web platform for online tailoring services including product browsing, cart system, and user authentication.</p>
+                            <div class="tech-stack"><span>HTML/CSS</span><span>JavaScript</span><span>Backend</span></div>
+                            <div class="project-links mt-6">
+                                <a href="#" class="btn btn-primary">Live Demo</a>
+                                <a href="#" class="btn btn-secondary">GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card glass-card premium-hover reveal" style="transition-delay: 300ms;">
+                        <div class="project-img">
+                            <div class="img-placeholder" style="background: linear-gradient(45deg, #4c1d95, #6d28d9);">&#x1F4E1;</div>
+                        </div>
+                        <div class="project-content">
+                            <h3>IoT Sensor Based Systems</h3>
+                            <p class="text-muted">Worked on IoT-based practical systems involving sensor data monitoring and device automation concepts during technical workshops.</p>
+                            <div class="tech-stack"><span>IoT</span><span>Sensors</span><span>Automation</span></div>
+                            <div class="project-links mt-6"><a href="#" class="btn btn-secondary">View Case Study</a></div>
+                        </div>
+                    </div>
+                    <div class="project-card glass-card premium-hover reveal" style="transition-delay: 400ms;">
+                        <div class="project-img">
+                            <div class="img-placeholder" style="background: linear-gradient(45deg, #7f1d1d, #991b1b);">&#x1F4DD;</div>
+                        </div>
+                        <div class="project-content">
+                            <h3>Online Attendance System</h3>
+                            <p class="text-muted">Designed digital attendance workflow using Google Forms integration for academic and FDP sessions.</p>
+                            <div class="tech-stack"><span>Google Forms</span><span>Workflow Automation</span></div>
+                            <div class="project-links mt-6"><a href="#" class="btn btn-secondary">Learn More</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- EXPERIENCE -->
+        <section id="experience" class="experience section-padding">
+            <div class="container relative">
+                <div class="section-header reveal">
+                    <h2>Experience &amp; <span class="gradient-text-alt">Responsibilities</span></h2>
+                    <p class="subtitle">Leadership and organizational roles.</p>
+                </div>
+                <div class="experience-timeline reveal relative" style="display: flex; justify-content: center;">
+                    <div class="timeline" style="width: 100%; max-width: 800px;">
+                        <div class="timeline-item glass-card premium-hover" style="padding: 2rem; margin-top: 1rem;">
+                            <div class="timeline-dot" style="top: 50%; left: -1.5rem;"></div>
+                            <div class="badge badge-accent mb-4">Current</div>
+                            <h3 class="timeline-title">Coordinator &ndash; Robotics Club</h3>
+                            <p class="timeline-org text-muted mb-4">Government Engineering College, West Champaran</p>
+                            <ul class="interest-tags mt-4">
+                                <li>Organized IoT workshop programs</li>
+                                <li>Managed student participation</li>
+                                <li>Assisted in technical event planning</li>
+                                <li>Promoted innovation culture in campus</li>
+                            </ul>
+                        </div>
+                        <div class="timeline-item glass-card premium-hover reveal" style="padding: 2rem; margin-top: 2rem; transition-delay: 100ms;">
+                            <div class="timeline-dot" style="top: 50%; left: -1.5rem;"></div>
+                            <div class="badge badge-accent mb-4">Current</div>
+                            <h3 class="timeline-title">Coordinator &ndash; Abacus Club</h3>
+                            <p class="timeline-org text-muted mb-4">Government Engineering College, West Champaran</p>
+                            <ul class="interest-tags mt-4">
+                                <li>Organized events</li>
+                                <li>Managed student participation</li>
+                                <li>Assisted in technical event planning</li>
+                                <li>Promoted innovation culture in campus</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section id="contact" class="contact section-padding bg-alt">
+            <div class="container relative">
+                <div class="glow-orb orb-2" style="bottom: 0; right: 0;"></div>
+                <div class="section-header reveal">
+                    <h2>Get in <span class="gradient-text">Touch</span></h2>
+                    <p class="subtitle">Let's build something amazing together.</p>
+                </div>
+                <div class="contact-grid">
+                    <div class="contact-info glass-card reveal">
+                        <h3>Contact Information</h3>
+                        <p class="text-muted mb-8" style="margin-bottom: 2rem;">Feel free to reach out for collaborations, project inquiries, or just to say hi.</p>
+                        <div class="contact-item">
+                            <span class="icon">&#x1F4DE;</span>
+                            <div><h4>Phone</h4><a href="tel:+917970717003" class="text-muted premium-hover">+91 7970717003</a></div>
+                        </div>
+                        <div class="contact-item">
+                            <span class="icon">&#x1F4E7;</span>
+                            <div><h4>Email</h4><a href="mailto:ayushbar7970@gmail.com" class="text-muted premium-hover">ayushbar7970@gmail.com</a></div>
+                        </div>
+                        <div class="contact-item">
+                            <span class="icon">&#x1F4CD;</span>
+                            <div><h4>Location</h4><span class="text-muted">Bihar, India</span></div>
+                        </div>
+                        <div class="hero-socials mt-8" style="justify-content: flex-start; margin-top: 2rem;">
+                            <a href="https://github.com/GitzAyu" target="_blank" class="social-icon" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg></a>
+                            <a href="https://www.linkedin.com/in/ayuinque" target="_blank" class="social-icon" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg></a>
+                            <a href="https://www.instagram.com/_itx._.ayu_" target="_blank" class="social-icon" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+                        </div>
+                    </div>
+                    <div class="contact-form glass-card reveal" style="transition-delay: 100ms;">
+                        <form id="contactForm">
+                            <div class="form-group mb-4">
+                                <label for="name" class="text-muted" style="display:block; margin-bottom:0.5rem; font-size:0.9rem;">Name</label>
+                                <input type="text" id="name" class="form-control" placeholder="John Doe" required>
+                            </div>
+                            <div class="form-group mb-4">
+                                <label for="email" class="text-muted" style="display:block; margin-bottom:0.5rem; font-size:0.9rem;">Email</label>
+                                <input type="email" id="email" class="form-control" placeholder="john@example.com" required>
+                            </div>
+                            <div class="form-group mb-6" style="margin-bottom: 1.5rem;">
+                                <label for="message" class="text-muted" style="display:block; margin-bottom:0.5rem; font-size:0.9rem;">Message</label>
+                                <textarea id="message" rows="4" class="form-control" placeholder="How can I help you?" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-full" style="width: 100%">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer class="footer">
+            <div class="container relative reveal">
+                <div class="footer-content" style="text-align: center;">
+                    <div class="footer-logo">Ayush <span>Kumar</span></div>
+                    <p class="text-muted mt-4" style="max-width: 400px; margin: 1rem auto;">Passionate about building innovative technology solutions in Web Development, IoT, and Robotics.</p>
+                </div>
+                <div class="footer-bottom mt-10">
+                    <p class="text-muted text-sm">&copy; 2026 Ayush Kumar. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <!-- Core Interaction Scripts -->
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+
+        // 1. Custom Cursor
+        const cursor = document.getElementById('custom-cursor');
+        if (window.matchMedia('(pointer: fine)').matches) {
+            document.addEventListener('mousemove', (e) => {
+                cursor.style.left = e.clientX + 'px';
+                cursor.style.top  = e.clientY + 'px';
+            });
+            document.querySelectorAll('a, button, .premium-hover').forEach(el => {
+                el.addEventListener('mouseenter', () => cursor.classList.add('hover'));
+                el.addEventListener('mouseleave', () => cursor.classList.remove('hover'));
+            });
+        } else {
+            cursor.style.display = 'none';
+        }
+
+        // 2. Scroll Reveal + Progress Bars
+        const reveals      = document.querySelectorAll('.reveal');
+        const progressBars = document.querySelectorAll('.progress');
+
+        const revealOnScroll = () => {
+            const vh = window.innerHeight;
+            reveals.forEach(el => {
+                if (el.getBoundingClientRect().top < vh - 50) el.classList.add('active');
+            });
+            progressBars.forEach(bar => {
+                if (bar.getBoundingClientRect().top < vh - 50) {
+                    bar.style.width = bar.getAttribute('data-width');
+                }
+            });
+        };
+        window.addEventListener('scroll', revealOnScroll);
+        revealOnScroll();
+
+        // 3. Navbar scroll tint
+        const navbar = document.querySelector('.navbar');
+        window.addEventListener('scroll', () => {
+            navbar.style.background   = window.scrollY > 50 ? 'rgba(0,0,0,0.85)' : 'rgba(0,0,0,0.5)';
+            navbar.style.boxShadow    = window.scrollY > 50 ? '0 4px 30px rgba(0,0,0,0.1)' : 'none';
+        });
+
+        // 4. Hero 3D cursor tracking
+        const heroWrapper = document.querySelector('.hero-image-wrapper');
+        if (heroWrapper) {
+            document.querySelector('.hero').addEventListener('mousemove', (e) => {
+                const rect = heroWrapper.getBoundingClientRect();
+                const cx = rect.left + rect.width  / 2;
+                const cy = rect.top  + rect.height / 2;
+                const rx = ((e.clientY - cy) / (rect.height / 2)) * -8;
+                const ry = ((e.clientX - cx) / (rect.width  / 2)) *  8;
+                heroWrapper.style.transform = `perspective(1200px) rotateX(${rx}deg) rotateY(${ry}deg)`;
+            });
+            document.querySelector('.hero').addEventListener('mouseleave', () => {
+                heroWrapper.style.transform = 'perspective(1200px) rotateX(0deg) rotateY(0deg)';
+            });
+        }
+
+        // 5. Count-Up for Stats
+        const statNumbers = document.querySelectorAll('.stat-number');
+        let counted = false;
+        new IntersectionObserver((entries) => {
+            if (entries[0].isIntersecting && !counted) {
+                counted = true;
+                statNumbers.forEach(stat => {
+                    const target = +stat.getAttribute('data-target');
+                    const inc    = target / (2000 / 16);
+                    let cur = 0;
+                    const tick = () => {
+                        cur += inc;
+                        if (cur < target) { stat.innerText = Math.ceil(cur) + (target > 10 ? '+' : ''); requestAnimationFrame(tick); }
+                        else { stat.innerText = target + (target > 10 ? '+' : ''); }
+                    };
+                    tick();
+                });
+            }
+        }, { threshold: 0.5 }).observe(document.querySelector('.stats-grid'));
+
+        // 6. 3D Tilt on Glass Cards
+        if (window.matchMedia('(pointer: fine)').matches) {
+            document.querySelectorAll('.glass-card').forEach(card => {
+                card.addEventListener('mousemove', (e) => {
+                    const r  = card.getBoundingClientRect();
+                    const rx = ((e.clientY - r.top  - r.height/2) / (r.height/2)) * -12;
+                    const ry = ((e.clientX - r.left - r.width /2) / (r.width /2)) *  12;
+                    const px = ((e.clientX - r.left) / r.width)  * 100;
+                    const py = ((e.clientY - r.top)  / r.height) * 100;
+                    card.style.transition = 'transform 0.1s ease';
+                    card.style.transform  = `perspective(1200px) rotateX(${rx}deg) rotateY(${ry}deg) translateZ(10px) scale3d(1.03,1.03,1.03)`;
+                    card.style.background = `radial-gradient(circle at ${px}% ${py}%, rgba(255,255,255,0.07) 0%, transparent 60%), var(--card-bg)`;
+                    card.style.zIndex = '10';
+                });
+                card.addEventListener('mouseleave', () => {
+                    card.style.transition = 'transform 0.5s ease, background 0.5s ease';
+                    card.style.transform  = 'perspective(1200px) rotateX(0deg) rotateY(0deg) scale3d(1,1,1)';
+                    card.style.background = 'var(--card-bg)';
+                    card.style.zIndex = '1';
+                });
+            });
+        }
+
+        // 7. Hero Parallax
+        const heroImg   = document.querySelector('.hero-profile-img');
+        const heroCtx   = document.querySelector('.hero-content');
+        const techIcons = document.querySelectorAll('.tech-icon');
+        const orbs      = document.querySelectorAll('.glow-orb');
+        let ticking = false;
+        window.addEventListener('scroll', () => {
+            if (!ticking) {
+                requestAnimationFrame(() => {
+                    const sy = window.scrollY;
+                    if (sy < window.innerHeight) {
+                        if (heroImg)  heroImg.style.transform  = `translateY(${sy * 0.25}px) scale(${1 + sy * 0.0005})`;
+                        if (heroCtx) { heroCtx.style.transform = `translateY(${sy * 0.15}px)`; heroCtx.style.opacity = 1 - sy * 0.002; }
+                        techIcons.forEach((ic, i) => {
+                            const sp = 0.35 + i * 0.15, rot = i % 2 === 0 ? 0.3 : -0.3;
+                            ic.style.transform = `translateY(${sy * -sp}px) rotate(${sy * rot}deg) scale(${1 + sy * 0.002})`;
+                        });
+                    }
+                    orbs.forEach((orb, i) => {
+                        orb.style.transform = `translateY(${sy * 0.08 * ((i % 3) + 1) * (i % 2 === 0 ? 1 : -0.5)}px)`;
+                    });
+                    ticking = false;
+                });
+                ticking = true;
+            }
+        });
+
+        // 8. Mobile Menu
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navLinks   = document.querySelector('.nav-links');
+        const burgerSVG  = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>';
+        const closeSVG   = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>';
+        if (menuToggle && navLinks) {
+            menuToggle.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+                menuToggle.innerHTML = navLinks.classList.contains('active') ? closeSVG : burgerSVG;
+            });
+            navLinks.querySelectorAll('a').forEach(a => {
+                a.addEventListener('click', () => { navLinks.classList.remove('active'); menuToggle.innerHTML = burgerSVG; });
+            });
+        }
+    });
+    </script>
+
+    <!-- EmailJS SDK -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <!-- Contact Form via EmailJS -->
+    <script>
+    emailjs.init('eFJQRDwwro0820SK7');
+
+    document.getElementById('contactForm').addEventListener('submit', async function(e) {
+        e.preventDefault();
+        const btn  = this.querySelector('button[type="submit"]');
+        const orig = btn.textContent;
+        const name    = document.getElementById('name').value.trim();
+        const email   = document.getElementById('email').value.trim();
+        const message = document.getElementById('message').value.trim();
+
+        if (!name || !email || !message) {
+            btn.textContent = 'Please fill all fields';
+            btn.style.background = '#ef4444';
+            setTimeout(() => { btn.textContent = orig; btn.style.background = ''; }, 3000);
+            return;
+        }
+
+        btn.textContent = 'Sending...';
+        btn.disabled = true;
+
+        try {
+            await emailjs.send('service_frtlnvt', 'template_eod77a7', {
+                from_name:  name,
+                from_email: email,
+                message:    message,
+                reply_to:   email
+            });
+            btn.textContent = 'Message Delivered! 🚀';
+            btn.style.background = '#10b981';
+            btn.style.color = 'white';
+            this.reset();
+        } catch (err) {
+            console.error('EmailJS error:', err);
+            const sub  = encodeURIComponent('Portfolio Contact: ' + name);
+            const body = encodeURIComponent('Name: ' + name + '\nEmail: ' + email + '\n\nMessage:\n' + message);
+            window.open('mailto:ayushbar7970@gmail.com?subject=' + sub + '&body=' + body, '_blank');
+            btn.textContent = 'Mail app opened as fallback';
+            btn.style.background = '#f59e0b';
+        }
+
+        setTimeout(() => {
+            btn.textContent = orig;
+            btn.disabled = false;
+            btn.style.background = '';
+            btn.style.color = '';
+        }, 5000);
+    });
+    </script>
+
+
+
+    <!-- Canvas Particle Network -->
+    <script>
+    (function() {
+        const canvas = document.getElementById('particles-canvas');
+        if (!canvas) return;
+        const ctx = canvas.getContext('2d');
+        let W, H, parts = [];
+        const N = window.innerWidth < 768 ? 45 : 100;
+        const DIST = 150;
+        const C = 'rgba(0,255,255,';
+        let mx = null, my = null;
+        window.addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; });
+        window.addEventListener('mouseout',  () => { mx = null; my = null; });
+        function resize() { W = canvas.width = window.innerWidth; H = canvas.height = window.innerHeight; }
+        class P {
+            constructor() { this.x=Math.random()*W; this.y=Math.random()*H; this.sz=Math.random()*2+0.5; this.vx=(Math.random()-0.5)*0.8; this.vy=(Math.random()-0.5)*0.8; }
+            step() {
+                if(this.x>W||this.x<0) this.vx*=-1;
+                if(this.y>H||this.y<0) this.vy*=-1;
+                if(mx!==null){const dx=mx-this.x,dy=my-this.y,d=Math.hypot(dx,dy);if(d<180){const f=(180-d)/180;this.x-=dx/d*f*2;this.y-=dy/d*f*2;}}
+                this.x+=this.vx; this.y+=this.vy;
+            }
+            draw() { ctx.beginPath(); ctx.arc(this.x,this.y,this.sz,0,Math.PI*2); ctx.fillStyle=C+'0.8)'; ctx.fill(); }
+        }
+        function init() { parts=Array.from({length:N},()=>new P()); }
+        function frame() {
+            ctx.clearRect(0,0,W,H);
+            parts.forEach((p,i)=>{
+                p.step(); p.draw();
+                for(let j=i+1;j<parts.length;j++){
+                    const d=Math.hypot(p.x-parts[j].x,p.y-parts[j].y);
+                    if(d<DIST){ctx.beginPath();ctx.strokeStyle=C+(1-d/DIST)*0.22+')';ctx.lineWidth=1;ctx.moveTo(p.x,p.y);ctx.lineTo(parts[j].x,parts[j].y);ctx.stroke();}
+                }
+                if(mx!==null){const d=Math.hypot(p.x-mx,p.y-my);if(d<DIST){ctx.beginPath();ctx.strokeStyle=C+(1-d/DIST)*0.7+')';ctx.lineWidth=1;ctx.moveTo(p.x,p.y);ctx.lineTo(mx,my);ctx.stroke();}}
+            });
+            requestAnimationFrame(frame);
+        }
+        window.addEventListener('resize',()=>{resize();init();});
+        resize(); init(); frame();
+    })();
+    </script>
+</body>
+</html>
